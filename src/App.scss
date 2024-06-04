@@ -1,0 +1,129 @@
+// VARIABLE
+
+$header-background: rgb(39, 51, 56);
+$main-background: #eceff1;
+$blue: #1976d2;
+$red: #c2185b;
+$grey: #f7f7f7;
+$gray: #cdd1d4;
+
+// GENERAL
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 60%;
+}
+
+body {
+  background-color: $main-background;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.container {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.bg-blue {
+  background-color: $blue;
+}
+
+.bg-red {
+  background-color: $red;
+}
+
+// HEADER
+
+header {
+  padding: 3rem 0;
+  background-color: $header-background;
+  color: white;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    p {
+      font-size: 3rem;
+    }
+    img {
+      height: 8rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+// MAIN
+
+main {
+  padding: 4rem 0;
+}
+
+.accounts {
+  .account-and-button {
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+    > div {
+      padding-top: 1rem;
+      display: flex;
+      justify-content: flex-end;
+    }
+    button {
+      background-color: $grey;
+      color: gray;
+      padding: 1rem;
+      border: none;
+      border-radius: 1rem;
+      font-size: 2rem;
+      margin: 0 3rem;
+    }
+  }
+  .account {
+    > div {
+      display: flex;
+      &:first-child {
+        justify-content: space-between;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        font-size: 2.5rem;
+        color: white;
+        font-weight: bold;
+      }
+      &:not(:first-child) {
+        padding: 2rem;
+        margin: 0 3rem;
+        justify-content: space-between;
+        font-size: 2rem;
+        &:nth-child(odd) {
+          background-color: $grey;
+        }
+        &:nth-child(even) {
+          background-color: white;
+        }
+        > div {
+          display: flex;
+          gap: 3rem;
+          p:first-child {
+            color: gray;
+          }
+        }
+        > p::after {
+          content: " €";
+        }
+      }
+    }
+  }
+}
